@@ -4,6 +4,7 @@ To make webpage:
 
 ```sh
 ./generate-html.sh > index.html
+open index.html
 ```
 
 bye
