@@ -3,6 +3,7 @@
 filename="inscriptions.json"
 
 echo "<html><body>"
+echo "<title>Maxibots</title>"
 echo "<style>
 body { background-color: rgb(225, 223, 219); padding-bottom: 2rem; }
 h1 { text-align: center; }
