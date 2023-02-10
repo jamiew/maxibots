@@ -9,7 +9,7 @@ h1 { text-align: center; }
 h1 img#logo { width: 50%; margin: 0 auto; }
 #grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   gap: 3px 3px;
   /* max-width: 800px; */
@@ -18,6 +18,8 @@ h1 img#logo { width: 50%; margin: 0 auto; }
 }
 #grid div img { width: 100%; }
 a { color: #f0f; }
+@media (min-width: 640px) { #grid { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1024px) { #grid { grid-template-columns: repeat(5, 1fr); } }
 </style>"
 echo '<div id="container">'
 echo '<h1><img id="logo" src="logo.png" alt="Maxibots" /></h1>'
