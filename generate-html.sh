@@ -4,15 +4,34 @@ filename="inscriptions.json"
 
 echo "<html><body>"
 echo "<style>
-/* body { display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 1rem; } */
 body { background-color: rgb(225, 223, 219); }
-div { text-align: center; text-size: 80%; width: 30%; float: left; margin-right: 1rem; margin-bottom: 1rem; }
-div img { width: 100%; }
+h1 { text-align: center; }
+h1 img#logo { width: 50%; margin: 0 auto; }
+#grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  gap: 3px 3px;
+  /* max-width: 800px; */
+  margin: 0 auto;
+  /* padding: 100px 50px; */
+}
+#grid div img { width: 100%; }
 a { color: #f0f; }
 </style>"
-
+echo '<div id="container">'
+echo '<h1><img id="logo" src="logo.png" alt="Maxibots" /></h1>'
+echo '<div id="grid">'
 cat inscriptions.json |
   jq -r '.[] .inscription' |
-  xargs -n1 sh -c 'echo "<div><a href=\"https://ordinals.com/inscriptions/$1\"><img src=\"https://ordinals.com/preview/$1\" /></a></div>"' sh
+  xargs -n1 sh -c 'echo " \
+<div> \
+  <a href=\"https://ordinals.com/inscription/$1\"> \
+    <img src=\"https://ordinals.com/preview/$1\" /> \
+  </a> \
+</div> \
+"' sh
 
-echo "</body</html>"
+echo '</div>'
+echo '</div>'
+echo '</body</html>'
