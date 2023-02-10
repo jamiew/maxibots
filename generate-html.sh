@@ -4,11 +4,11 @@ filename="inscriptions.json"
 
 echo "<html><body>"
 echo "<style>
-body { background-color: rgb(225, 223, 219); }
+body { background-color: rgb(225, 223, 219); padding-bottom: 2rem; }
 h1 { text-align: center; }
-h1 img#logo { width: 50%; margin: 0 auto; }
+h1 img#logo { width: 50%; }
 #container {
-  max-width: 800px;
+  max-width: 1100px;
   margin: 0 auto 50px auto;
 }
 #grid {
@@ -18,12 +18,12 @@ h1 img#logo { width: 50%; margin: 0 auto; }
   gap: 3px 3px;
 }
 #grid div img { width: 100%; }
-a { color: #f0f; }
-@media (min-width: 640px) { #grid { grid-template-columns: repeat(4, 1fr); } }
+a { color: #000; }
+@media (min-width: 768px) { #grid { grid-template-columns: repeat(4, 1fr); } }
 @media (min-width: 1024px) { #grid { grid-template-columns: repeat(5, 1fr); } }
 </style>"
 echo '<div id="container">'
-echo '<h1><img id="logo" src="logo.png" alt="Maxibots" /></h1>'
+echo '<h1><a href="https://maxibots.xyz"><img id="logo" src="logo.png" alt="Maxibots" /></a></h1>'
 echo '<div id="grid">'
 cat inscriptions.json |
   jq -r '.[] .inscription' |
