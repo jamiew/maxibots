@@ -8,6 +8,8 @@ echo "<style>
 body { background-color: rgb(225, 223, 219); padding-bottom: 2rem; }
 h1 { text-align: center; }
 h1 img#logo { width: 50%; }
+#sub { font-family: sans-serif; color: #212121; }
+#buttons { display:flex; }
 #container {
   max-width: 1100px;
   margin: 0 auto 50px auto;
@@ -25,6 +27,8 @@ a { color: #000; }
 </style>"
 echo '<div id="container">'
 echo '<h1><a href="https://maxibots.xyz"><img id="logo" src="logo.png" alt="Maxibots" /></a></h1>'
+echo '<div id="sub">108 lil’ bots inscribed on the Bitcoin blockchain</div>'
+echo '<div id="buttons"><a>discord</a><a>roadmap</a></div>'
 echo '<div id="grid">'
 cat inscriptions.json |
   jq -r '.[] .inscription' |
