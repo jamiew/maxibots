@@ -23,7 +23,7 @@ h1 img#logo { width: 50%; }
   text-decoration: none;
 }
 #container {
-  max-width: 1100px;
+  max-width: 1440px;
   margin: 0 auto 50px auto;
 }
 #grid {
@@ -34,7 +34,6 @@ h1 img#logo { width: 50%; }
 }
 #grid div img { width: 100%; }
 a { color: #000; }
-@media (min-width: 768px) { #grid { grid-template-columns: repeat(4, 1fr); } }
 @media (min-width: 1024px) { #grid { grid-template-columns: repeat(5, 1fr); } }
 </style>"
 echo '<div id="container">'
